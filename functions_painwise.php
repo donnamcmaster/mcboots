@@ -1,11 +1,4 @@
 <?php
-/**
- * McBoots functions and definitions.
- *
- * @link https://developer.wordpress.org/themes/basics/theme-functions/
- *
- * @package McBoots
- */
 
 call_user_func(function() {
     $setupScripts = [
