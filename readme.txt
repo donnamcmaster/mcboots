@@ -23,10 +23,6 @@ Hi. I'm a starter theme called McBoots, or underscores, if you like. I'm a theme
 
 == Frequently Asked Questions ==
 
-= Does this theme support any plugins? =
-
-McBoots includes support for Infinite Scroll in Jetpack.
-
 == Changelog ==
 
 = 1.0 - May 12 2015 =

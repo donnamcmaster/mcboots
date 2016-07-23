@@ -217,26 +217,26 @@ function bootstrap_comment_form_defaults( $defaults )
     $aria_req = ( $req ? " aria-required='true'" : '' );
     $defaults['fields'] =  array(
         'author' => '<div class="form-group comment-form-author">' .
-                '<label for="author" class="col-sm-3 control-label">' . __( 'Name', 'mcw_s' ) . ( $req ? ' <span class="required">*</span>' : '' ) . '</label> ' .
+                '<label for="author" class="col-sm-3 control-label">' . __( 'Name', 'mcboots' ) . ( $req ? ' <span class="required">*</span>' : '' ) . '</label> ' .
                 '<div class="col-sm-9">' .
                     '<input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '"  class="form-control"' . $aria_req . ' />' .
                 '</div>' .
             '</div>',
         'email'  => '<div class="form-group comment-form-email">' .
-                '<label for="email" class="col-sm-3 control-label">' . __( 'Email', 'mcw_s' ) . ( $req ? ' <span class="required">*</span>' : '' ) . '</label> ' .
+                '<label for="email" class="col-sm-3 control-label">' . __( 'Email', 'mcboots' ) . ( $req ? ' <span class="required">*</span>' : '' ) . '</label> ' .
                 '<div class="col-sm-9">' .
                     '<input id="email" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) . '"  class="form-control"' . $aria_req . ' />' .
                 '</div>' .
             '</div>',
         'url'    => '<div class="form-group comment-form-url">' .
-            '<label for="url" class="col-sm-3 control-label"">' . __( 'Website', 'mcw_s' ) . '</label>' .
+            '<label for="url" class="col-sm-3 control-label"">' . __( 'Website', 'mcboots' ) . '</label>' .
                 '<div class="col-sm-9">' .
                     '<input id="url" name="url" type="text" value="' . esc_attr( $commenter['comment_author_url'] ) . '"  class="form-control" />' .
                 '</div>' .
             '</div>',
     );
     $defaults['comment_field'] = '<div class="form-group comment-form-comment">' .
-        '<label for="comment" class="col-sm-3 control-label">' . _x( 'Comment', 'noun', 'mcw_s' ) . '</label>' .
+        '<label for="comment" class="col-sm-3 control-label">' . _x( 'Comment', 'noun', 'mcboots' ) . '</label>' .
             '<div class="col-sm-9">' .
                 '<textarea id="comment" name="comment" aria-required="true" class="form-control" rows="8"></textarea>' .
                 '<span class="help-block form-allowed-tags">' . sprintf( __( 'You may use these <abbr title="HyperText Markup Language">HTML</abbr> tags and attributes: %s' ), ' <code>' . allowed_tags() . '</code>' ) . '</span>' .
@@ -297,12 +297,12 @@ function _strap_build_init()
     // Register our settings field group
     add_settings_section(
         'default', // Unique identifier for the settings section
-        __('Name your new _strapped theme', 'mcw_s'), // Section title
+        __('Name your new _strapped theme', 'mcboots'), // Section title
         '__return_false', // Section callback (we don't want anything)
         '_strap_build' // Menu slug, used to uniquely identify the page; see _strap_build_add_page()
     );
-    add_settings_field( '_strap_build_name', __( 'Theme name', 'mcw_s' ), '_strap_build_field_name', '_strap_build', 'default');
-    add_settings_field( '_strap_build_slug', __( 'Theme slug', 'mcw_s' ), '_strap_build_field_slug', '_strap_build', 'default' );
+    add_settings_field( '_strap_build_name', __( 'Theme name', 'mcboots' ), '_strap_build_field_name', '_strap_build', 'default');
+    add_settings_field( '_strap_build_slug', __( 'Theme slug', 'mcboots' ), '_strap_build_field_slug', '_strap_build', 'default' );
 }
 add_action( 'admin_init', '_strap_build_init' );
 
@@ -310,7 +310,7 @@ function _strap_build_field_name() {
     $options = _strap_build_get_options();
     $selected = array_key_exists('name', $options) ? $options['name'] : '';
     ?><input  class="all-options" type="text" name="_strap_build_options[name]" id="_strap_build_options_name" value="<?php echo esc_attr( $selected ); ?>" />
-    <span class="description"><?php _e( 'Something like "My Awesome Theme" ', 'mcw_s' ); ?></span>
+    <span class="description"><?php _e( 'Something like "My Awesome Theme" ', 'mcboots' ); ?></span>
 <?php
 }
 
@@ -318,7 +318,7 @@ function _strap_build_field_slug() {
     $options = _strap_build_get_options();
     $selected = array_key_exists('slug', $options) ? $options['slug'] : '';
     ?><input class="all-options" type="text" name="_strap_build_options[slug]" id="_strap_build_options_slug" value="<?php echo esc_attr( $selected ); ?>" />
-    <span class="description"><?php _e( 'Something like "my_awesome_theme" or "mat" - only letters, numbers and underscores allowed', 'mcw_s' ); ?></span>
+    <span class="description"><?php _e( 'Something like "my_awesome_theme" or "mat" - only letters, numbers and underscores allowed', 'mcboots' ); ?></span>
 <?php
 }
 
@@ -363,21 +363,21 @@ function _strap_build_validate( $input ) {
 
     // name
     if( empty($output['name']) ) {
-        add_settings_error( '_strap_build_name', '_strap_build_name_req', __('Name is required', 'mcw_s'), 'error' );
+        add_settings_error( '_strap_build_name', '_strap_build_name_req', __('Name is required', 'mcboots'), 'error' );
         $error++;
     }
 
     // slug
     if( empty($output['slug']) ) {
         $sane_slug = _strap_build_sanitize($output['name']);
-        $err_msg = sprintf(__('You must specify a valid Theme slug - try: %s', 'mcw_s'), $sane_slug);
+        $err_msg = sprintf(__('You must specify a valid Theme slug - try: %s', 'mcboots'), $sane_slug);
         add_settings_error( '_strap_build_slug', '_strap_build_slug_req', $err_msg, 'error' );
         $error = true;
     }
     else {
         $sane_slug = _strap_build_sanitize($output['slug']);
         if($sane_slug != $output['slug']) {
-            $err_msg = sprintf(__('%s is not a valid Theme slug - try: %s instead', 'mcw_s'), $output['slug'], $sane_slug);
+            $err_msg = sprintf(__('%s is not a valid Theme slug - try: %s instead', 'mcboots'), $output['slug'], $sane_slug);
             add_settings_error( '_strap_build_slug', '_strap_build_slug_regexp', $err_msg, 'error' );
             $output['slug'] = '';
             $error++;
@@ -403,8 +403,8 @@ function _strap_build_validate( $input ) {
 function _strap_build_add_page()
 {
     $theme_page = add_theme_page(
-        __( 'Build theme', 'mcw_s' ), // Name of page
-        __( 'Build theme', 'mcw_s' ), // Label in menu
+        __( 'Build theme', 'mcboots' ), // Name of page
+        __( 'Build theme', 'mcboots' ), // Label in menu
         'manage_options',          // Capability required
         '_strap_build',           // Menu slug, used to uniquely identify the page
         '_strap_build_render_page' // Function that renders the options page
@@ -421,14 +421,14 @@ function _strap_build_render_page()
     ?>
 <div class="wrap">
     <?php screen_icon(); ?>
-    <h2><?php _e( 'Build theme', 'mcw_s' ); ?></h2>
+    <h2><?php _e( 'Build theme', 'mcboots' ); ?></h2>
     <?php settings_errors(); ?>
 
     <form method="post" action="options.php">
     <?php
         settings_fields( '_strap_build' );
         do_settings_sections( '_strap_build' );
-        submit_button(__( '_strap it!', 'mcw_s' ));
+        submit_button(__( '_strap it!', 'mcboots' ));
     ?>
     </form>
 </div>
@@ -564,7 +564,7 @@ function _strap_build_scan($name, $slug, $dir = false)
 function _strap_build_replace($name, $slug, $path)
 {
     if (is_dir($path)) return null;
-    $search = array("'mcw_s'", '_s_', ' mcw_s');
+    $search = array("'mcboots'", '_s_', ' mcboots');
     $replace = array("'$slug'", $slug . '_', " $name");
 
     $content = file_get_contents($path); // binary-safe
@@ -611,9 +611,9 @@ Description: TODO
 Version: 0.1
 License: GNU General Public License
 License URI: license.txt
-Tags: bootstrap, mcw_s, _strap
+Tags: bootstrap, mcboots, _strap
 
-Based on _strap [https://github.com/ptbello/_strap], a mashup of mcw_s [https://github.com/Automattic/mcw_s] and Bootstrap [https://github.com/twitter/bootstrap]
+Based on _strap [https://github.com/ptbello/_strap], a mashup of mcboots [https://github.com/Automattic/mcboots] and Bootstrap [https://github.com/twitter/bootstrap]
 */
 END;
 }
