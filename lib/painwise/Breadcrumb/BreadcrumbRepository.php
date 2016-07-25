@@ -1,16 +1,16 @@
 <?php
 
-namespace Painwise\Breadcrumb;
+namespace Cully\Breadcrumb;
 
-use Painwise\Post\PostRepository;
-use Painwise\Post\PostEntity;
-use Painwise\Page\PageRepository;
-use Painwise\Event\EventRepository;
-use Painwise\Article\ArticleRepository;
-use Painwise\News\NewsRepository;
-use Painwise\Tools\Wordpress;
-use Painwise\Tools\Tribe;
-use Painwise\Tools\Url;
+use Cully\Post\PostRepository;
+use Cully\Post\PostEntity;
+use Cully\Page\PageRepository;
+use Cully\Event\EventRepository;
+use Cully\Article\ArticleRepository;
+use Cully\News\NewsRepository;
+use Cully\Tools\Wordpress;
+use Cully\Tools\Tribe;
+use Cully\Tools\Url;
 
 class BreadcrumbRepository {
     public static function getCrumbsForPost($postId) {

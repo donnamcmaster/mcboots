@@ -1,17 +1,17 @@
 <?php
 
-add_shortcode('author', function($atts, $content=null) {
+add_shortcode( 'author', function( $atts, $content=null ) {
     ob_start();
     ?>
     <div class='author'>
-        <span class='leader'>–</span> <span class='name'><?= empty($atts['name']) ? "" : esc_html($atts['name']); ?></span>
+        <span class='leader'>–</span> <span class='name'><?= empty( $atts['name'] ) ? "" : esc_html( $atts['name'] ); ?></span>
     </div>
     <?php
 
     return ob_get_clean();
 });
 
-add_shortcode('highlight', function($atts, $content=null) {
+add_shortcode( 'highlight', function( $atts, $content=null ) {
     ob_start();
     ?>
     <div class='highlight'>

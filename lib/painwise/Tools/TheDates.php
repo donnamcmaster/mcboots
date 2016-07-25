@@ -1,6 +1,6 @@
-<?php
+Cully<?php
 
-namespace Painwise\Tools;
+namespace Cully\Tools;
 
 class TheDates {
     public static function sameDay(\DateTimeInterface $dt1, \DateTimeInterface $dt2) {

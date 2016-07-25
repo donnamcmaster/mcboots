@@ -1,9 +1,9 @@
 <?php
 
-namespace Painwise\Views;
+namespace Cully\Views;
 
-use Painwise\Tools\Wordpress;
-use Painwise\AdminSettings\AdminSettingsRepository;
+use Cully\Tools\Wordpress;
+use Cully\AdminSettings\AdminSettingsRepository;
 
 class SocialShareWidget {
     public static function render($pageTitle, $pageUrl) {

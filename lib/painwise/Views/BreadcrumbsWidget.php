@@ -1,9 +1,9 @@
 <?php
 
-namespace Painwise\Views;
+namespace Cully\Views;
 
-use Painwise\Tools\Arr;
-use Painwise\Tools\Wordpress;
+use Cully\Tools\Arr;
+use Cully\Tools\Wordpress;
 
 class BreadcrumbsWidget {
     /**

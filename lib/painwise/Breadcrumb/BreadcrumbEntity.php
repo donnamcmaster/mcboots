@@ -1,6 +1,6 @@
 <?php
 
-namespace Painwise\Breadcrumb;
+namespace Cully\Breadcrumb;
 
 class BreadcrumbEntity {
     /**
