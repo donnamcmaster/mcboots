@@ -1,4 +1,4 @@
-<?php get_template_part( 'templates/head' ); ?>
+<?php get_template_part( 'template-parts/head' ); ?>
 <body <?php body_class(); ?>>
 <div class="wrapper">
 
@@ -12,20 +12,20 @@
 	do_action( 'get_header' );
 	// Use Bootstrap's navbar if enabled in config.php
 	if ( current_theme_supports( 'bootstrap-top-navbar' ) ) {
-		get_template_part( 'templates/header-top-navbar' );
+		get_template_part( 'template-parts/header-top-navbar' );
 	} else {
-		get_template_part( 'templates/header' );
+		get_template_part( 'template-parts/header' );
 	}
 
 	if ( is_front_page() ) {
-		get_template_part( 'templates/front-feature-img' );
+		get_template_part( 'template-parts/front-feature-img' );
 	}
 
 	// now the main content body
 ?>
 <div class="wrap container" role="document">
-	<?php get_template_part( 'templates/breadcrumbs' ); ?>
-	<?php get_template_part( 'templates/page-feature-img' ); ?>
+	<?php get_template_part( 'template-parts/breadcrumbs' ); ?>
+	<?php get_template_part( 'template-parts/page-feature-img' ); ?>
 	<div class="content row">
 		<main class="main <?php echo roots_main_class(); ?>" role="main">
 			<?php include roots_template_path(); ?>
@@ -46,7 +46,7 @@
 </div><!-- /.wrap -->
 
 <?php
-	get_template_part('templates/footer');
+	get_template_part('template-parts/footer');
 ?>
 
 </div><!-- /.wrapper -->

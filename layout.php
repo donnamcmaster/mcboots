@@ -5,7 +5,7 @@
 
 ?><!doctype html>
 <html <?php language_attributes(); ?>>
-<?php get_template_part( 'templates/head' ); ?>
+<?php get_template_part( 'template-parts/head' ); ?>
 
 <body <?php body_class(); ?>>
 <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'mcboots' ); ?></a>
@@ -14,7 +14,7 @@
 <?php
 	// add the <header> element
 	do_action( 'get_header' );
-	get_template_part( 'templates/header' );
+	get_template_part( 'template-parts/header' );
 ?>
 
 <div class="content container" id="content"role="document">
@@ -28,18 +28,18 @@
 
 <?php
 	// allow for an optional single sidebar
-	get_template_part( 'templates/aside', 'sidebar' );
+	get_template_part( 'template-parts/sidebar', 'primary' );
 ?>
 	</div><!-- row -->
 </div><!-- content container -->
 
 <?php
 	// allow for a full-width aside between content and footer
-	get_template_part( 'templates/aside', 'footbar' );
+	get_template_part( 'template-parts/aside', 'footbar' );
 
 	// add the <footer> element
 	do_action( 'get_footer' );
-	get_template_part( 'templates/footer' );
+	get_template_part( 'template-parts/footer' );
 ?>
 </div><!-- #page -->
 

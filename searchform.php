@@ -1,6 +1,7 @@
 <?php
 /**
  * The template for displaying search forms
+ * Modified to use Bootstrap classes by _strap
  *
  * @package McBoots
  */

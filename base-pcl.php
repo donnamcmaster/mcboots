@@ -1,4 +1,4 @@
-<?php get_template_part( 'templates/head' ); ?>
+<?php get_template_part( 'template-parts/head' ); ?>
 <body <?php body_class(); ?>>
 
 <!--[if lt IE 8]>
@@ -9,19 +9,19 @@
 
 <?php
 	do_action( 'get_header' );
-	get_template_part( 'templates/header-top-navbar' );
+	get_template_part( 'template-parts/header-top-navbar' );
 	if ( is_front_page() ) {
-		get_template_part( 'templates/home-slides' );
+		get_template_part( 'template-parts/home-slides' );
 	} else {
-		get_template_part( 'templates/featured-image' );
+		get_template_part( 'template-parts/featured-image' );
 	}
 
 	// now the content
 ?>
 <div class="content" role="document">
 	<div class="content-header container">
-		<?php get_template_part('templates/breadcrumbs'); ?>
-		<?php get_template_part('templates/page', 'header'); ?>
+		<?php get_template_part('template-parts/breadcrumbs'); ?>
+		<?php get_template_part('template-parts/page', 'header'); ?>
 	</div>
 
 <?php
@@ -36,7 +36,7 @@
 				<?php edit_post_link(); ?>
 			</main><!-- main -->
 			<aside class="sidebar <?php echo roots_sidebar_class(); ?>" role="complementary">
-				<?php get_template_part( 'templates/sidebar', 'blog' ); ?>
+				<?php get_template_part( 'template-parts/sidebar', 'blog' ); ?>
 			</aside><!-- sidebar -->
 		</div><!-- row -->
 	</div><!-- content-body container -->
@@ -61,12 +61,12 @@
 
 <?php
 	if ( is_front_page() ) {
-		get_template_part( 'templates/sidebar', 'news-events' );
+		get_template_part( 'template-parts/aside', 'footbar' );
 	}
 ?>
 
 <?php
-	get_template_part('templates/footer');
+	get_template_part('template-parts/footer');
 ?>
 
 </body>
