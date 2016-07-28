@@ -7,19 +7,18 @@
  * @package McBoots
  */
 
-call_user_func(function() {
+call_user_func( function() {
     $setupScripts = [
-        __DIR__ . "/lib/setup/Config.php",
-        __DIR__ . "/lib/setup/Autoload.php",
-        __DIR__ . "/lib/setup/Assets.php",
-        __DIR__ . "/lib/setup/LayoutWrapper.php",
-        __DIR__ . "/lib/setup/Menus.php",
-        __DIR__ . "/lib/setup/PostSlugBodyClass.php",
+        __DIR__ . "/lib/setup/config.php",
+        __DIR__ . "/lib/setup/assets.php",
+        __DIR__ . "/lib/setup/layout-wrapper.php",
+        __DIR__ . "/lib/setup/menus.php",
+        __DIR__ . "/lib/setup/body-class.php",
 
-        __DIR__ . "/lib/setup/MiscShortcodes.php",
+        __DIR__ . "/lib/setup/shortcodes.php",
     ];
 
-    foreach ($setupScripts as $setupScript) {
-        include_once($setupScript);
+    foreach ( $setupScripts as $setupScript ) {
+        include_once( $setupScript );
     }
 });

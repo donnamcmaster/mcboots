@@ -8,9 +8,9 @@ add_filter( 'template_include', function( $template ) {
 
     ob_start();
     include( $template );
-    $content = ob_get_clean();
+    $main_content = ob_get_clean();
 
-    echo $layout( $content );
+    echo $layout( $main_content );
 
     // this will prevent wordpress from trying to include anything
     return false;

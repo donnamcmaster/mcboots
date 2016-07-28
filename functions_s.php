@@ -91,7 +91,7 @@ function mcboots_widgets_init() {
 		'id'            => 'sidebar-1',
 		'description'   => esc_html__( 'Add widgets here.', 'mcboots' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
+		'after_widget'  => '</section>',s
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );

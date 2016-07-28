@@ -1,30 +1,54 @@
 <?php
 
-return function($content) {
-    ob_start();
-    ?>
+	return function( $main_content ) {
+	ob_start();
 
-<!doctype html>
+?><!doctype html>
 <html <?php language_attributes(); ?>>
-  <?php get_template_part( 'partials/head' ); ?>
-  <body <?php body_class(); ?>>
-    <?php
-      do_action( 'get_header' );
-      get_template_part( 'partials/header' );
-    ?>
+<?php get_template_part( 'templates/head' ); ?>
 
-    <main>
-      <?= $content; ?>
-    </main>
+<body <?php body_class(); ?>>
+<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'mcboots' ); ?></a>
+<div id="page" class="site">
 
-    <?php
-      do_action( 'get_footer' );
-      get_template_part( 'partials/footer' );
-      wp_footer();
-    ?>
-  </body>
+<?php
+	// add the <header> element
+	do_action( 'get_header' );
+	get_template_part( 'templates/header' );
+?>
+
+<div class="content container" id="content"role="document">
+	<div class="row">
+		<main class="main <?= mcboots_main_class(); ?>" role="main">
+<?php
+	echo $main_content;
+	edit_post_link();
+?>
+		</main>
+
+<?php
+	// allow for an optional single sidebar
+	get_template_part( 'templates/aside', 'sidebar' );
+?>
+	</div><!-- row -->
+</div><!-- content container -->
+
+<?php
+	// allow for a full-width aside between content and footer
+	get_template_part( 'templates/aside', 'footbar' );
+
+	// add the <footer> element
+	do_action( 'get_footer' );
+	get_template_part( 'templates/footer' );
+?>
+</div><!-- #page -->
+
+<?php
+	wp_footer();
+?>
+</body>
 </html>
 
-    <?php
-    return ob_get_clean();
+<?php
+	return ob_get_clean();
 };
