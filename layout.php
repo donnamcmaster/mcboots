@@ -19,7 +19,7 @@
 
 <div class="content container" id="content"role="document">
 	<div class="row">
-		<main class="main <?= mcboots_main_class(); ?>" role="main">
+		<main class="site-main <?= mcboots_main_class(); ?>" role="main">
 <?php
 	echo $main_content;
 	edit_post_link();
