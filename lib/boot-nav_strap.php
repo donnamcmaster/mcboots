@@ -1,4 +1,5 @@
 <?php
+namespace McBoots\Navigation;
 
 /**
  * Bootstrap menu class injection
@@ -27,8 +28,9 @@ function bootstrap_menu_objects($sorted_menu_items, $args)
 add_filter( 'wp_nav_menu_objects', 'bootstrap_menu_objects', 10, 2 );
 
 
-// below this line is the _strap nav walker code
 
+
+// below this line is the _strap nav walker code
 
 /**
  * Custom Bootstrap Walker

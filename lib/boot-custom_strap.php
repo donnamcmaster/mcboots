@@ -1,4 +1,6 @@
 <?php
+
+
 // Bootstrap styling for captions, comment forms, search forms
 // from _strap
 
@@ -34,11 +36,7 @@ function bootstrap_img_caption_shortcode( $output, $attr, $content )  {
  * Bootstrap styled Comment form.
  */
 add_filter( 'comment_form_defaults', 'bootstrap_comment_form_defaults', 10, 1 );
-
-function bootstrap_comment_form_defaults( $defaults )
-{
-    /*    */
-
+function bootstrap_comment_form_defaults( $defaults ) {
     $commenter = wp_get_current_commenter();
     $req = get_option( 'require_name_email' );
     $aria_req = ( $req ? " aria-required='true'" : '' );
@@ -74,8 +72,9 @@ function bootstrap_comment_form_defaults( $defaults )
 
     return $defaults;
 }
-add_action( 'comment_form', 'bootstrap_comment_form', 10, 1 );
 
+
+add_action( 'comment_form', 'bootstrap_comment_form', 10, 1 );
 function bootstrap_comment_form( $post_id )
 {
     // closing tag for 'comment_notes_after'

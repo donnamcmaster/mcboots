@@ -2,10 +2,8 @@
 
 add_action( 'init', function() {
     register_nav_menu( 'primary_navigation', 'Primary Navigation' );
-    register_nav_menu( 'topline_menu', 'Top Line Menu' );
-    register_nav_menu( 'landing_pages_menu', 'Landing Pages Menu' );
+    register_nav_menu( 'utility_menu', 'Utility Menu' );
     register_nav_menu( 'footer_menu', 'Footer Menu' );
-    register_nav_menu( 'add_your_menu', 'Add-Your Menu' );
 });
 
 // output menu item descriptions if flag set

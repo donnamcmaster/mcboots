@@ -13,7 +13,7 @@
 	}
 
 ?>
-	<div class="page-content">
+	<div class="entry-content">
 		<p><?=$message; ?></p>
 		<?php get_search_form(); ?>
-	</div><!-- .page-content -->
+	</div><!-- .entry-content -->

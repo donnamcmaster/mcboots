@@ -1,5 +1,7 @@
 <?php
 /**
+ * template-parts/content-search.php
+ *
  * Template part for displaying results in search pages.
  *
  * @package McBoots
