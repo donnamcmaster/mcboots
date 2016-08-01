@@ -8,22 +8,23 @@
 	get_template_part( 'template-parts/page', 'header' );
 
 	if ( have_posts() ) {
-?>
-	<ul class="unstyled-list">
 
+?>
+	<ul class="post-list unstyled-list">
 <?php
 		while ( have_posts() ) : the_post();
-			get_template_part( 'template-parts/content', 'search' );
+			$post_type = get_post_type();
+			$selector = ( $post_type == 'post' ) ? get_post_format() : $post_type;
+			get_template_part( 'template-parts/content', $selector );
 		endwhile;
-
-		the_posts_navigation();
 ?>
 	</ul>
 
 <?php
 
+		the_posts_navigation();
+
+	// empty list
 	} else {
-
 		get_template_part( 'template-parts/content', 'none' );
-
 	}

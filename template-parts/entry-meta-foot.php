@@ -8,7 +8,6 @@
  * @package McBoots
  */
 
-
 	$byline = get_post_meta( $post->ID, 'byline', true );
 
 	if ( $byline ) {

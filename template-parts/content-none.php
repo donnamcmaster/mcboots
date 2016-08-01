@@ -15,5 +15,5 @@
 ?>
 	<div class="entry-content">
 		<p><?=$message; ?></p>
-		<?php get_search_form(); ?>
+		<?php get_search_form( true ); ?>
 	</div><!-- .entry-content -->

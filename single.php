@@ -10,11 +10,7 @@
 		get_template_part( 'template-parts/page', 'header' );
 
 		$post_type = get_post_type();
-		if ( $post_type == 'post' ) {
-			$selector = get_post_format();
-		} else {
-			$selector = $post_type;
-		}
+		$selector = ( $post_type == 'post' ) ? get_post_format() : $post_type;
 
 		get_template_part( 'template-parts/content-single', $selector );
 

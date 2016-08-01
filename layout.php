@@ -21,10 +21,7 @@
 <div class="content container" id="content"role="document">
 	<div class="row">
 		<main class="site-main <?= Template\main_class(); ?>" role="main">
-<?php
-	echo $main_content;
-	edit_post_link();
-?>
+		<?= $main_content; ?>
 		</main>
 
 <?php
