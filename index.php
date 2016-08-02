@@ -10,18 +10,16 @@
 	if ( have_posts() ) {
 
 ?>
-	<ol reversed class="post-list unstyled-list">
+	<ol class="post-list unstyled-list">
 <?php
 		while ( have_posts() ) : the_post();
-			$post_type = get_post_type();
-			$selector = ( $post_type == 'post' ) ? get_post_format() : $post_type;
-			get_template_part( 'template-parts/content', $selector );
+			$post_type_class = get_post_type().'_Views';
+			echo $post_type_class::render_list_item();
 		endwhile;
 ?>
 	</ol>
 
 <?php
-
 		the_posts_navigation();
 
 	// empty list

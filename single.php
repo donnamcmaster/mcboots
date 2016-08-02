@@ -5,13 +5,9 @@
  * @package McBoots
  */
 
-	while ( have_posts() ) : the_post();
-	
+	while ( have_posts() ) : the_post();	
 		get_template_part( 'template-parts/page', 'header' );
 
-		$post_type = get_post_type();
-		$selector = ( $post_type == 'post' ) ? get_post_format() : $post_type;
-
-		get_template_part( 'template-parts/content-single', $selector );
-
+		$post_type_class = get_post_type().'_Views';
+		echo $post_type_class::render_singular();
 	endwhile; // end of the loop

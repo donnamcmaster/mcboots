@@ -17,6 +17,11 @@ call_user_func( function() {
         __DIR__ . "/lib/shortcodes.php",
         __DIR__ . "/lib/titles.php",
         __DIR__ . "/lib/template.php",
+        
+        __DIR__ . "/lib/views/base-views.php",
+        __DIR__ . "/lib/views/attachment-views.php",
+        __DIR__ . "/lib/views/page-views.php",
+        __DIR__ . "/lib/views/post-views.php",
 
 //        __DIR__ . "/lib/gallery.php",
     ];

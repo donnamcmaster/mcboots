@@ -7,5 +7,7 @@
 
 	while ( have_posts() ) : the_post();
 		get_template_part( 'template-parts/page', 'header' );
-		get_template_part( 'template-parts/content', 'page' );
+
+		$post_type_class = get_post_type().'_Views';
+		echo $post_type_class::render_singular();
 	endwhile;
