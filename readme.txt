@@ -1,7 +1,7 @@
 === McBoots ===
 
-Contributors: automattic
-Tags: translation-ready, custom-background, theme-options, custom-menu, post-formats, threaded-comments
+Contributors: Donna McMaster
+Tags: translation-ready, custom-menu
 
 Requires at least: 4.0
 Tested up to: 4.5.3
@@ -9,11 +9,11 @@ Stable tag: 1.0.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-A starter theme called McBoots, or underscores.
+A starter theme called McBoots.
 
 == Description ==
 
-Hi. I'm a starter theme called McBoots, or underscores, if you like. I'm a theme meant for hacking so don't use me as a Parent Theme. Instead try turning me into the next, most awesome, WordPress theme out there. That's what I'm here for.
+McBoots is a parent theme based on the Bootstrap 3 framework. It borrows heavily from Underscores (_s), UnderStrap (_strap), Roots/Sage, and the purely functional code of Cully Larson. But you can blame Donna McMaster for anything that doesn't work right.
 
 == Installation ==
 
@@ -25,10 +25,9 @@ Hi. I'm a starter theme called McBoots, or underscores, if you like. I'm a theme
 
 == Changelog ==
 
-= 1.0 - May 12 2015 =
-* Initial release
+= 0.1 - August 1, 2016 =
+* Templates are working well enough to start styling. 
 
 == Credits ==
 
 * Based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
-* normalize.css http://necolas.github.io/normalize.css/, (C) 2012-2016 Nicolas Gallagher and Jonathan Neal, [MIT](http://opensource.org/licenses/MIT)

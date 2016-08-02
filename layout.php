@@ -10,7 +10,8 @@
 
 <body <?php body_class(); ?>>
 <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'mcboots' ); ?></a>
-<div id="page" class="site">
+
+<div id="page" class="site container">
 
 <?php
 	// add the <header> element
@@ -18,7 +19,7 @@
 	get_template_part( 'template-parts/header' );
 ?>
 
-<div class="content container" id="content"role="document">
+<div class="content" id="content" role="document">
 	<div class="row">
 		<main class="site-main <?= Template\main_class(); ?>" role="main">
 		<?= $main_content; ?>
