@@ -6,27 +6,28 @@
  */
 
 call_user_func( function() {
-    $setupScripts = [
-        __DIR__ . "/lib/setup/config.php",
-        __DIR__ . "/lib/setup/assets.php",
-        __DIR__ . "/lib/setup/menus.php",
-        __DIR__ . "/lib/setup/sidebars.php",
+	$setupScripts = [
+		'/lib/setup/config.php',
+		'/lib/setup/assets.php',
+		'/lib/setup/menus.php',
+		'/lib/setup/sidebars.php',
 
-        __DIR__ . "/lib/layout-wrapper.php",
-        __DIR__ . "/lib/body-class.php",
-        __DIR__ . "/lib/shortcodes.php",
-        __DIR__ . "/lib/titles.php",
-        __DIR__ . "/lib/template.php",
-        
-        __DIR__ . "/lib/views/base-views.php",
-        __DIR__ . "/lib/views/attachment-views.php",
-        __DIR__ . "/lib/views/page-views.php",
-        __DIR__ . "/lib/views/post-views.php",
+		'/lib/layout-wrapper.php',
+		'/lib/body-class.php',
+		'/lib/shortcodes.php',
+		'/lib/titles.php',
+		'/lib/template.php',
 
-//        __DIR__ . "/lib/gallery.php",
+		'/lib/views/base-views.php',
+		'/lib/views/attachment-views.php',
+		'/lib/views/page-views.php',
+		'/lib/views/post-views.php',
+
+
+//		'/lib/gallery.php',
     ];
 
-    foreach ( $setupScripts as $setupScript ) {
-        include_once( $setupScript );
-    }
+	foreach ( $setupScripts as $setupScript ) {
+		require_once locate_template( $setupScript );
+	}
 });

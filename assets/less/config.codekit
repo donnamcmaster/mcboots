@@ -1470,9 +1470,9 @@
 	},
 "projectAttributes": {
 	"bowerAbbreviatedPath": "",
-	"displayValue": "less",
-	"displayValueWasSetByUser": 0,
-	"iconImageName": "harddrive_blue"
+	"displayValue": "mcboots",
+	"displayValueWasSetByUser": 1,
+	"iconImageName": "harddrive_darkGray"
 	},
 "projectSettings": {
 	"alwaysUseExternalServer": 0,
