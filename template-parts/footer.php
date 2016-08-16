@@ -1,15 +1,15 @@
 <?php
 /**
- * The template for displaying the footer.
+ * Theme Footer
  *
  * @package McBoots
  */
 ?>
 
-	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'mcboots' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'mcboots' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'mcboots' ), 'mcboots', '<a href="https://www.donnamcmaster.com/" rel="designer">Donna McMaster</a>' ); ?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
+<footer class="content-info container" role="contentinfo">
+	<div class="site-info">
+		<?php wp_nav_menu( array( 'theme_location' => 'Footer Menu', 'menu' => 'Footer Menu', 'menu_class' => 'nav-footer' ) ); ?>
+		<p class="pull-right">&copy; <?= bloginfo( 'name' ); ?> <?php echo date('Y'); ?></p>
+		<p class="pull-left"> <a class="grey" href="#">Privacy Policy</a> | <a class="grey" href="#">Sitemap</a></p>
+	</div><!-- .site-info -->
+</footer><!-- .content-info -->

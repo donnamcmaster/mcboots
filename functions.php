@@ -7,24 +7,22 @@
 
 call_user_func( function() {
 	$setupScripts = [
+		// initialization & configuration
 		'/lib/setup/config.php',
 		'/lib/setup/assets.php',
 		'/lib/setup/menus.php',
 		'/lib/setup/sidebars.php',
 
+		// core template files
 		'/lib/layout-wrapper.php',
 		'/lib/body-class.php',
-		'/lib/shortcodes.php',
 		'/lib/titles.php',
 		'/lib/template.php',
+		'/lib/views.php',
 
-		'/lib/views/base-views.php',
-		'/lib/views/attachment-views.php',
-		'/lib/views/page-views.php',
-		'/lib/views/post-views.php',
-
-
-//		'/lib/gallery.php',
+		// extras
+		'/lib/shortcodes.php',
+		'/lib/gallery.php',
     ];
 
 	foreach ( $setupScripts as $setupScript ) {

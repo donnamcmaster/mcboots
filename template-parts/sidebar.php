@@ -10,6 +10,7 @@
  */
 
 if ( !is_active_sidebar( 'sidebar-primary' ) ) {
+	mcw_log( "expected active 'sidebar-primary' in template-parts/sidebar.php" );
 	return;
 }
 ?>

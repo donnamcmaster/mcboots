@@ -15,12 +15,7 @@ function display_sidebar ( $sidebar='sidebar-primary' ) {
 }
 
 function main_class () {
-	if ( display_sidebar() ) {
-		$class = 'col-sm-9';
-	} else {
-		$class = 'col-sm-12';
-	}
-	return $class;
+	return display_sidebar() ? 'col-sm-9' : 'col-sm-12';
 }
 
 function sidebar_class ( $sidebar='sidebar-primary' ) {

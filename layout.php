@@ -1,7 +1,15 @@
 <?php
-	use McBoots\Template;
+/**
+ * Layout
+ * - defines the skeleton of the rendered page
+ * - called from lib/layout-wrapper.php 
+ *
+ * @package McBoots
+ */
 
-	return function( $main_content ) {
+use McBoots\Template;
+
+return function( $main_content ) {
 	ob_start();
 
 ?><!doctype html>
@@ -11,7 +19,7 @@
 <body <?php body_class(); ?>>
 <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'mcboots' ); ?></a>
 
-<div id="page" class="site container">
+<div class="wrapper container">
 
 <?php
 	// add the <header> element
@@ -19,10 +27,10 @@
 	get_template_part( 'template-parts/header' );
 ?>
 
-<div class="content" id="content" role="document">
+<div class="content container" id="content" role="document">
 	<div class="row">
 		<main class="site-main <?= Template\main_class(); ?>" role="main">
-		<?= $main_content; ?>
+			<?= $main_content; ?>
 		</main>
 
 <?php

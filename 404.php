@@ -5,5 +5,5 @@
  * @package McBoots
  */
 
-	get_template_part( 'template-parts/page', 'header' );
-	get_template_part( 'template-parts/content', 'none' );
+get_template_part( 'template-parts/page', 'header' );
+get_template_part( 'template-parts/content', 'none' );

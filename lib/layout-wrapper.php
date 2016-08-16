@@ -1,10 +1,9 @@
 <?php
-
 // wraps content of the template in layout.php
 add_filter( 'template_include', function( $template ) {
     if( empty( $template ) || !is_string( $template ) || !is_file( $template ) ) return $template;
 
-    $layout = include( get_template_directory() . '/layout.php' );
+    $layout = include locate_template( '/layout.php' );
 
     ob_start();
     include( $template );
