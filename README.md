@@ -32,4 +32,4 @@ I appreciate your letting me know (via message or pull request) if you find any 
 
 ## License
 
-Licensed under GPLv2 or later.
+Licensed under [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html).
