@@ -1,5 +1,10 @@
 <?php
-// wraps content of the template in layout.php
+/**
+ * Wraps content of the template in layout.php.
+ *
+ * @package McBoots
+ */
+
 add_filter( 'template_include', function( $template ) {
     if( empty( $template ) || !is_string( $template ) || !is_file( $template ) ) return $template;
 

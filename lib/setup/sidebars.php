@@ -1,6 +1,10 @@
 <?php
+/**
+ *	Register Sidebars / Widget Areas
+ *
+ * @package McBoots
+ */
 
-// register sidebar as widget area
 add_action( 'widgets_init', function() {
 	register_sidebar( array(
 		'name'          => esc_html__( 'Primary', 'mcboots' ),

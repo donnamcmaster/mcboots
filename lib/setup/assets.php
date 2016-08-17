@@ -1,4 +1,9 @@
 <?php
+/**
+ * Enqueue styles and scripts.
+ *
+ * @package McBoots
+ */
 
 add_action( 'wp_enqueue_scripts', function() {
     wp_enqueue_style( 'mcboots/css', get_stylesheet_directory_uri() . '/assets/css/app.css', [], null );

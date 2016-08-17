@@ -1,7 +1,10 @@
 <?php
 /**
  *	Configure Theme Support
+ *
+ * @package McBoots
  */
+
 add_action( 'after_setup_theme', function() {
 
 	// makes the featured image box show up in custom post types
@@ -23,26 +26,4 @@ add_action( 'after_setup_theme', function() {
 	) );
 	
 	$GLOBALS['content_width'] = 1140;
-});
-
-
-/**
- *	Thumbnails & Image Sizes
- */
-add_action( 'after_setup_theme', function() {
-	// fixed sizes for special situations
-//	add_image_size( 'home-slide', 1170, 500, true );
-
-	// for the pop-up gallery images
-    add_image_size( 'max-gallery', 1200, 800 );
-
-	// for embedding
-//    add_image_size( 'content-wide', 765, 420 );
-});
-
-
-// configure gallery sizes
-// no need to filter 'mcb_gallery_thumb_size' as 'thumbnail' is default
-add_filter( 'mcb_gallery_enlarged_size', function() {
-	return 'max-gallery';
 });

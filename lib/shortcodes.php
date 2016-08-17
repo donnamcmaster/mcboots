@@ -1,6 +1,9 @@
 <?php
-
-// a couple of simple, handy shortcodes
+/**
+ *	Some handy shortcodes
+ *
+ * @package McBoots
+ */
 
 add_shortcode( 'author', function( $atts, $content=null ) {
     ob_start();

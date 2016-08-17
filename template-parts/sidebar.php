@@ -1,13 +1,11 @@
 <?php
-	use McBoots\Template;
-
 /**
  * The sidebar containing the main widget area.
  *
- * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
- *
  * @package McBoots
  */
+
+use McBoots\Template;
 
 if ( !is_active_sidebar( 'sidebar-primary' ) ) {
 	mcw_log( "expected active 'sidebar-primary' in template-parts/sidebar.php" );

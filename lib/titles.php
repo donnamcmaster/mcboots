@@ -1,10 +1,12 @@
 <?php
+/**
+ *	Page Titles
+ *
+ * @package McBoots
+ */
 
 namespace McBoots\Titles;
 
-/**
-* Page titles
-*/
 function title() {
 	if ( is_home() ) {
 		if ( get_option( 'page_for_posts', true ) ) {
