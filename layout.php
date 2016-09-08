@@ -27,7 +27,7 @@ return function( $main_content ) {
 	get_template_part( 'template-parts/header' );
 ?>
 
-<div class="content container" id="content" role="document">
+<div class="content" id="content" role="document">
 	<div class="row">
 		<main class="site-main <?= Template\main_class(); ?>" role="main">
 			<?= $main_content; ?>
@@ -40,7 +40,7 @@ return function( $main_content ) {
 	}
 ?>
 	</div><!-- row -->
-</div><!-- content container -->
+</div><!-- content -->
 
 <?php
 	// allow for a full-width aside between content and footer

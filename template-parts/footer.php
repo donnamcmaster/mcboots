@@ -1,6 +1,6 @@
 <?php
 /**
- * Theme Footer
+ * The template for displaying the footer.
  *
  * @package McBoots
  */
