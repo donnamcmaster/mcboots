@@ -6,7 +6,7 @@
  */
 ?>
 
-<footer class="content-info container" role="contentinfo">
+<footer class="content-info" role="contentinfo">
 	<div class="site-info">
 		<?php wp_nav_menu( array( 'theme_location' => 'Footer Menu', 'menu' => 'Footer Menu', 'menu_class' => 'nav-footer' ) ); ?>
 		<p class="pull-right">&copy; <?= bloginfo( 'name' ); ?> <?php echo date('Y'); ?></p>
