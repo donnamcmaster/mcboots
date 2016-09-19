@@ -18,6 +18,7 @@ call_user_func( function() {
 		// core template files
 		'/lib/layout-wrapper.php',
 		'/lib/body-class.php',
+		'/lib/nav-walker.php',
 		'/lib/titles.php',
 		'/lib/template.php',
 		'/lib/views.php',
