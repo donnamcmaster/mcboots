@@ -27,11 +27,5 @@
 				<?php wp_nav_menu( ['theme_location' => 'primary_navigation', 'menu_class' => 'nav navbar-nav'] ); ?>
 			</nav>
 		<?php endif; ?>
-
-		<?php if ( has_nav_menu( 'utility_menu' ) ) : ?>
-			<div class="utility-menu no-phone">
-				<?php wp_nav_menu( ['theme_location' => 'utility_menu', 'menu_class' => 'nav utility-nav'] ); ?>
-			</div><!-- utility-menu -->
-		<?php endif; ?>
 	</div>
 </header>
