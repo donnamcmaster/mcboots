@@ -22,7 +22,7 @@
 			<a class="navbar-brand" href="<?php echo home_url(); ?>/" rel="home"><?= bloginfo( 'name' ); ?></a>
 		</div>
 
-		<?php if ( has_nav_menu( 'primary' ) ) : ?>
+		<?php if ( has_nav_menu( 'primary_navigation' ) ) : ?>
 			<nav class="collapse navbar-collapse" role="navigation">
 				<?php wp_nav_menu( ['theme_location' => 'primary_navigation', 'menu_class' => 'nav navbar-nav'] ); ?>
 			</nav>
