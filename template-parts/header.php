@@ -22,12 +22,16 @@
 			<a class="navbar-brand" href="<?php echo home_url(); ?>/" rel="home"><?= bloginfo( 'name' ); ?></a>
 		</div>
 
-		<nav class="collapse navbar-collapse" role="navigation">
-			<?php wp_nav_menu( ['theme_location' => 'primary_navigation', 'menu_class' => 'nav navbar-nav'] ); ?>
-		</nav>
+		<?php if ( has_nav_menu( 'primary' ) ) : ?>
+			<nav class="collapse navbar-collapse" role="navigation">
+				<?php wp_nav_menu( ['theme_location' => 'primary_navigation', 'menu_class' => 'nav navbar-nav'] ); ?>
+			</nav>
+		<?php endif; ?>
 
-		<div class="utility-menu no-phone">
-			<?php wp_nav_menu( ['theme_location' => 'utility_menu', 'menu_class' => 'nav utility-nav'] ); ?>
-		</div><!-- utility-menu -->
+		<?php if ( has_nav_menu( 'utility_menu' ) ) : ?>
+			<div class="utility-menu no-phone">
+				<?php wp_nav_menu( ['theme_location' => 'utility_menu', 'menu_class' => 'nav utility-nav'] ); ?>
+			</div><!-- utility-menu -->
+		<?php endif; ?>
 	</div>
 </header>
