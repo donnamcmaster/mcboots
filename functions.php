@@ -11,7 +11,6 @@ call_user_func( function() {
 		'/lib/setup/config.php',
 		'/lib/setup/assets.php',
 		'/lib/setup/images.php',
-		'/lib/setup/gallery-config.php',
 		'/lib/setup/menus.php',
 		'/lib/setup/sidebars.php',
 
