@@ -31,6 +31,7 @@ return function( $main_content ) {
 	<div class="row">
 		<main class="site-main <?= Template\main_class(); ?>" role="main">
 			<?= $main_content; ?>
+			<?php edit_post_link(); ?>
 		</main>
 
 <?php
