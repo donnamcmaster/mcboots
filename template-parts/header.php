@@ -19,7 +19,7 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" href="<?php echo home_url(); ?>/" rel="home"><?= bloginfo( 'name' ); ?></a>
+			<a class="navbar-brand" href="<?= home_url(); ?>/" rel="home"><?= bloginfo( 'name' ); ?></a>
 		</div>
 
 		<?php if ( has_nav_menu( 'primary_navigation' ) ) : ?>
