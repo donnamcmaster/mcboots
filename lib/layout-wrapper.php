@@ -6,7 +6,7 @@
  */
 
 add_filter( 'template_include', function( $template ) {
-    if( empty( $template ) || !is_string( $template ) || !is_file( $template ) ) return $template;
+    if ( empty( $template ) || !is_string( $template ) || !is_file( $template ) ) return $template;
 
     $layout = include locate_template( '/layout.php' );
 
