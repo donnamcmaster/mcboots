@@ -21,17 +21,13 @@ return function( $main_content ) {
 
 <div class="wrapper container">
 
-<?php
-	// add the <header> element
-	do_action( 'get_header' );
-	get_template_part( 'template-parts/header' );
-?>
+	<?php get_header(); ?>
 
-<div class="content" id="content" role="document">
-	<div class="row">
-		<main class="site-main <?= Template\main_class(); ?>" role="main">
-			<?= $main_content; ?>
-		</main>
+	<div class="content" id="content" role="document">
+		<div class="row">
+			<main class="site-main <?= Template\main_class(); ?>" role="main">
+				<?= $main_content; ?>
+			</main>
 
 <?php
 	// allow for an optional single sidebar
@@ -39,8 +35,8 @@ return function( $main_content ) {
 		get_template_part( 'template-parts/sidebar', 'primary' );
 	}
 ?>
-	</div><!-- row -->
-</div><!-- content -->
+		</div><!-- row -->
+	</div><!-- content -->
 
 <?php
 	// allow for a full-width aside between content and footer
@@ -49,14 +45,12 @@ return function( $main_content ) {
 	}
 
 	// add the <footer> element
-	do_action( 'get_footer' );
-	get_template_part( 'template-parts/footer' );
+	get_footer();
 ?>
-</div><!-- #page -->
+</div><!-- wrapper container -->
 
-<?php
-	wp_footer();
-?>
+<?php wp_footer(); ?>
+
 </body>
 </html>
 
