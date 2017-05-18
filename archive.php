@@ -11,7 +11,7 @@ get_template_part( 'template-parts/page', 'header' );
 
 if ( have_posts() ) {
 ?>
-	<ol class="post-list unstyled-list">
+	<ol class="post-list list-unstyled">
 
 <?php
 	while ( have_posts() ) : the_post();
