@@ -2,7 +2,8 @@
 /**
  * Bootstrap Gallery Code
  * - generates Bootstrap v3 row/col markup based on the # of columns 
- * - assumes a 12-column grid; defaults to 4 cols if value isn't a factor of 12
+ * - assumes a 12-column grid; defaults to 3 cols if value isn't a factor of 12
+ *   (the default is based on WordPress gallery cols default of 3)
  * - phone-size gets fewer columns with max of 3
  * - add filters to change thumbnail or full sizes
  * - 'img-responsive' is defined in Bootstrap
@@ -17,8 +18,9 @@
 
 add_filter( 'post_gallery', 'bootstrap_gallery', 10, 3 );
 function bootstrap_gallery ( $output = '', $atts, $instance ) {
+	$default_number_columns = 3;
 	$defaults = [
-		'columns' => 4,
+		'columns' => $default_number_columns,
 		'thumb_size' => apply_filters( 'mcb_gallery_thumb_size', 'thumbnail' ),
 		'enlarged_size' => apply_filters( 'mcb_gallery_enlarged_size', 'full' ),
 	];
@@ -33,9 +35,9 @@ function bootstrap_gallery ( $output = '', $atts, $instance ) {
 	$images = explode( ',', $atts['ids'] );
 
 	// map number of columns to the Bootstrap CSS markup
-	// if unworkable # of columns, set it to 4
-	if ( isset( $col_map[$columns] ) ) {
-		$columns = 4;
+	// if unworkable # of columns, set it to 3
+	if ( !isset( $col_map[$columns] ) ) {
+		$columns = $default_number_columns;
 	}
 	$col_map = [
 		// if fewer than 4 columns, go to 1 column in phone-size
@@ -65,6 +67,10 @@ function bootstrap_gallery ( $output = '', $atts, $instance ) {
 			continue;
 		}
 		$img_src = $img_atts[0];
+
+		$img_caption = '';
+		$img_caption = apply_filters( 'mcb_get_gallery_caption', $img_caption, $img_id );
+
 		$thumb_tag = wp_get_attachment_image( $img_id, $atts['thumb_size'], false, ['class'=>'img-responsive'] );
 
 		// time to start a new row?
@@ -79,7 +85,7 @@ function bootstrap_gallery ( $output = '', $atts, $instance ) {
 
 ?>
 		<div class="gallery_item <?= $col_class;?>">
-			<a data-gallery="gallery" href="<?= $img_src;?>">
+			<a data-gallery="gallery" href="<?= $img_src;?>" title="<?= $img_caption;?>">
 				<?= $thumb_tag;?>
 			</a>
 		</div>

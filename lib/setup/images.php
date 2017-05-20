@@ -36,3 +36,15 @@ add_filter( 'mcb_gallery_thumb_size', function() {
 	return 'thumbnail';
 });
 */
+
+/**
+ *	Add Gallery Titles
+ *	- adds title attribute to image tags; will show up as Magnific gallery captions
+ *	- uses caption if configured, otherwise image title
+ */
+add_filter( 'mcb_get_gallery_caption', function( $caption, $id ) {
+	$_post = get_post( $id );
+	if ( !$_post ) return $caption;
+	$caption = $_post->post_excerpt ? $_post->post_excerpt : $_post->post_title;
+	return esc_html( $caption );
+}, 10, 2 );
