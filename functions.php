@@ -30,4 +30,8 @@ call_user_func( function() {
 	foreach ( $setupScripts as $setupScript ) {
 		require_once locate_template( $setupScript );
 	}
+
+	if ( is_admin() ) {
+		include_once locate_template( '/lib/setup/admin.php' );
+	}
 });
