@@ -25,6 +25,9 @@ call_user_func( function() {
 		// extras
 		'/lib/shortcodes.php',
 		'/lib/gallery.php',
+		
+		// some options for initial activation
+//		'/lib/activation.php',
     ];
 
 	foreach ( $setupScripts as $setupScript ) {
