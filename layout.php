@@ -9,7 +9,7 @@
 
 use McBoots\Template;
 
-return function( $main_content ) {
+return function( $template ) {
 	ob_start();
 
 ?><!doctype html>
@@ -26,7 +26,7 @@ return function( $main_content ) {
 	<div class="content" id="content" role="document">
 		<div class="row">
 			<main class="site-main <?= Template\main_class(); ?>" role="main">
-				<?= $main_content; ?>
+				<?php include( $template ); ?>
 			</main>
 
 <?php
