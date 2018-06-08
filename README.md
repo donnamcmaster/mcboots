@@ -12,9 +12,8 @@ I build a lot of small to medium-sized custom-designed, responsive WordPress sit
 
 ## Status
 
-I developed McBoots in early August, 2016. As of August 16, it's live on one fairly simple site. Consider it Alpha level, and please check the code and functionality for yourself before trusting it. Here are the main unfinished pieces: 
+I developed McBoots in early August 2016. As of June 2018, it's live on six sites plus two WIPs. Consider it Beta level, and please check the code and functionality for yourself before trusting it. Here are the main unfinished pieces: 
 
-* haven't yet added support for Bootstrap dropdown menus to the nav
 * several areas are still WIP, including comments and entry meta for post_type 'post'
 * app.css and the bootstrap js files are not currently being minimized
 
