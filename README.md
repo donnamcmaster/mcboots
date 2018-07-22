@@ -17,6 +17,8 @@ I developed McBoots in early August 2016. As of June 2018, it's live on six site
 * several areas are still WIP, including comments and entry meta for post_type 'post'
 * app.css and the bootstrap js files are not currently being minimized
 
+As of July 2018, I've begun development on McBoots 4, which incorporates Bootstrap 4. It is still in a private repository. Contact me if you are interested. 
+
 ## Installation and Setup
 
 I'm not including build files with the project at this time. The only file that needs compilation is assets/less/app.less. It is compiled into assets/css/app.css. App.less includes the bootstrap files. 
