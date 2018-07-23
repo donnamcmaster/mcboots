@@ -1,8 +1,11 @@
 <?php
 /**
- * Layout
+ * Layout (default)
  * - defines the skeleton of the rendered page
  * - called from lib/layout-wrapper.php 
+ *
+ * Default layout: header, main and footer are all wrapped in one container. 
+ * Override in child theme if desired. 
  *
  * @package McBoots
  */
